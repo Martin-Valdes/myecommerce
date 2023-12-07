@@ -1,0 +1,56 @@
+.div{
+    background-color: rgba(124, 124, 124, 0.863);
+    .navBar{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        text-decoration: none;
+        h1{
+            display: none;
+        }
+        a{
+            img{
+                width: 7.5rem;
+                height: 7.5rem;
+                padding: 1.25rem;
+                margin-left: 2.1875rem;
+            }
+        }
+        .listNav{
+            display: flex;
+            margin: 1.25rem;
+            width: 100%;
+            justify-content: space-between;
+            ul{
+                display: flex;
+                gap: 1.25rem;
+                list-style: none;
+                padding: 1.25rem;
+                a{
+                    text-decoration: none;
+                    color: azure;
+                    font-size: 1.5rem;
+                    transition: 0.8s;
+                }
+                a:hover{
+                    color: red;
+                    filter: blur(.0525rem);
+                }
+            }
+            .cartLogo{
+                display: flex;
+                padding-right: 1.875rem;
+                img{
+                    width: 4.375rem;
+                    height: 4.375rem;
+                }
+                p{
+                    font-size: 1.5rem;
+                    margin-top: 0;
+
+                }
+            }
+        }
+    }
+}
