@@ -1,0 +1,13 @@
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: .625rem;
+    border: .125rem solid;
+    width: 13.125rem;
+    height: 17.5rem;
+    border-radius: .3125rem;
+    margin: 1.875rem;
+    background-color: rgb(231, 228, 228);
+}

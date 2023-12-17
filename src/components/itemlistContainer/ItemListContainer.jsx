@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
-import dataProduct from "./utils/data"
-
+import dataProduct from "../utils/data"
+import ItemList from "../itemList/ItemList"
+import "./ItemListContainer.css"
 
 const ItemListContainer = ({prop}) =>{
 
@@ -21,8 +22,8 @@ useEffect(()=>{
 
 },[]);
     return(
-        <div>
-            
+        <div className="itemListCont">
+            <ItemList products = {product}/>
         </div>
     )
 }
