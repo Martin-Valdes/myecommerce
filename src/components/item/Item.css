@@ -4,10 +4,17 @@
     align-items: center;
     flex-direction: column;
     box-shadow: .625rem;
-    border: .125rem solid;
+    border: .125rem solid rgb(184, 182, 182);
     width: 13.125rem;
     height: 17.5rem;
     border-radius: .3125rem;
     margin: 1.875rem;
     background-color: rgb(231, 228, 228);
+    transition: 0.3s;
+}
+img{
+    border-radius: .3125rem;
+}
+.item:hover{
+    box-shadow: .3125rem .3125rem .3125rem  gray;
 }

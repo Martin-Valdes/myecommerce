@@ -3,7 +3,7 @@ import dataProduct from "../utils/data"
 import ItemList from "../itemList/ItemList"
 import "./ItemListContainer.css"
 
-const ItemListContainer = ({prop}) =>{
+const ItemListContainer = () =>{
 
 const [product, setProduct] = useState([]);
 

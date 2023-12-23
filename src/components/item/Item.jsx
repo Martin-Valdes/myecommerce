@@ -5,7 +5,6 @@ const Item = ({product}) =>{
         <div className="item" >
             <img src={product.img} alt={product.modelo} />
             <p>{product.modelo}</p>
-
         </div>
     )
 }
