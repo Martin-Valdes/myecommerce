@@ -13,7 +13,7 @@ const ItemDetailContainer = () => {
 
         dataProduct
         .then((respuesta)=>{
-            const productoEncontrado = respuesta.find((prod)=> prod.id === "jjddu296")
+            const productoEncontrado = respuesta.find((prod)=> prod.id === "")
             setProtucto(productoEncontrado)
         })
     },[])
