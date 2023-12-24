@@ -1,0 +1,11 @@
+.detailItem{
+    background-color: rgb(66, 66, 66);
+    width: 12.5rem;
+    border: solid .0625rem black;
+    box-shadow: .3125rem .3125rem .3125rem black;
+    transition: 0.3s;
+}
+
+.detailItem:hover{
+    box-shadow: .625rem .625rem .625rem black;
+}
