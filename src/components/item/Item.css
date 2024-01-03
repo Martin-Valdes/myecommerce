@@ -1,21 +1,44 @@
 .item{
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    box-shadow: .625rem;
+   
     border: .125rem solid rgb(184, 182, 182);
     width: 13.125rem;
     height: 21.875rem;
-    border-radius: .3125rem;
     margin: 1.875rem;
-    background-color: rgb(231, 228, 228);
     transition: 0.3s;
     
 }
 img{
-    border-radius: .3125rem;
+    padding: 0;
+    margin: 0;
+    
 }
 .item:hover{
-    box-shadow: .3125rem .3125rem .3125rem  gray;
+    box-shadow: .3125rem .3125rem .3125rem .3125rem rgb(155, 155, 155);
+    scale: 1.01;
+}
+h2{
+    font-size: 1.25rem;
+    align-items: center;
+    text-align: center;
+    margin: .625rem 0;
+}
+p{
+    text-align: center;
+    margin: .625rem;
+}
+.link{
+    background-color: rgb(255, 255, 255);
+    height: 6.25rem;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 1.125rem;
+    color: white;
+    background-color: black;
+    transition: 0.3s;
+}
+
+.link:hover{
+    font-size: 1.125rem;
 }

@@ -5,7 +5,7 @@ const productos = [
         descripcion: "Excelente estado",
         stock:"3",
         precio:"54.323",
-        img:"/public/img/fuente-de-poder.jpg",
+        img:"/img/fuente-de-poder.jpg",
         categoria: "fuentes"
     },
     {
@@ -14,7 +14,7 @@ const productos = [
         descripcion: "Lo ultimo en tecnologia",
         stock:"30",
         precio:"34.984",
-        img:"/public/img/generador-de-frecuencia.jpg",
+        img:"/img/generador-de-frecuencia.jpg",
         categoria: "medicion"
 
     },
@@ -24,7 +24,7 @@ const productos = [
         descripcion: "Buen rendimiento",
         stock:"2",
         precio:"8.374",
-        img:"/public/img/osciloscopio-portatil.jpg",
+        img:"/img/osciloscopio-portatil.jpg",
         categoria: "medicion"
 
     },
@@ -34,7 +34,7 @@ const productos = [
         descripcion: "Relay uso general",
         stock:"11",
         precio:"154",
-        img:"/public/img/relay.jpg",
+        img:"/img/relay.jpg",
         categoria: "componentes"
 
     },
@@ -44,7 +44,7 @@ const productos = [
         descripcion: "Resistores varias medidas",
         stock:"1837",
         precio:"1",
-        img:"/public/img/resistores.jpg",
+        img:"/img/resistores.jpg",
         categoria: "componentes"
 
     },
@@ -54,7 +54,7 @@ const productos = [
         descripcion: "Temperatura regulable",
         stock:"5",
         precio:"8.734",
-        img:"/public/img/soldador.jpg",
+        img:"/img/soldador.jpg",
         categoria: "soldadores"
 
     },
@@ -64,7 +64,7 @@ const productos = [
         descripcion: "Bipolar",
         stock:"100",
         precio:"12",
-        img:"/public/img/switch.jpg",
+        img:"/img/switch.jpg",
         categoria: "componentes"
 
     },
@@ -74,7 +74,7 @@ const productos = [
         descripcion: "Soldaror RMS",
         stock:"4",
         precio:"124.221",
-        img:"/public/img/tester.jpg",
+        img:"/img/tester.jpg",
         categoria: "medicion"
 
     },
@@ -84,7 +84,7 @@ const productos = [
         descripcion: "Transistor TV",
         stock:"34",
         precio:"533",
-        img:"/public/img/transistor.jpg",
+        img:"/img/transistor.jpg",
         categoria: "componentes"
 
     }
