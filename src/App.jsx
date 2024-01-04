@@ -5,6 +5,7 @@ import ItemCount from "./components/itemcount/ItemCount"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
 import { BrowserRouter,Routes, Route, Navigate } from "react-router-dom"
 import Cart from "./components/cart/Cart"
+import { CartProvider } from "./context/CartContext"
 
 import './App.css'
 import cart from "./components/cart/Cart"
@@ -13,16 +14,18 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className='div'>
-        <NavBar/>
-        <Routes>
-          <Route path="/" element={<ItemListContainer/>} />
-          <Route path="/categoria/:categoria" element={<ItemListContainer/>}/>
-          <Route path="/detalle/:id" element={<ItemDetailContainer/>}/>
-          <Route path="/cart" element={<Cart/>}/>
-          <Route path="*" element= {<Navigate to="/" />}/>
-        </Routes>
-      </div>
+      <CartProvider>
+        <div className='div'>
+          <NavBar/>
+          <Routes>
+            <Route path="/" element={<ItemListContainer/>} />
+            <Route path="/categoria/:categoria" element={<ItemListContainer/>}/>
+            <Route path="/detalle/:id" element={<ItemDetailContainer/>}/>
+            <Route path="/cart" element={<Cart/>}/>
+            <Route path="*" element= {<Navigate to="/" />}/>
+          </Routes>
+        </div>
+      </CartProvider>
     </BrowserRouter>
   );
 }
