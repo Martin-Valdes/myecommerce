@@ -1,7 +1,16 @@
 .itemListCont{
     background-color: rgb(201, 201, 201);
+    width: 80%;
+    height: 100vh;
+    
 }
-
+.divItem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
 
 .loading{
     height: 100vh;

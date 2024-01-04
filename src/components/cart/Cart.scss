@@ -1,0 +1,25 @@
+.cart{
+    background-color: gray;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .ulCart{
+        background-color: gray;
+        display: flex;
+        list-style: none;
+        padding: 1.25rem;
+        .liCart{
+            display: flex;
+            flex-direction: column;
+            width: 12.5rem;
+            background-color: white;
+            padding: 1.25rem;
+            margin: 1.25rem;
+            align-items: center;
+            
+        }
+       
+    }
+}

@@ -10,10 +10,9 @@
             display: none;
         }
         a{
-            img{
+            .imgLogo{
                 width: 7.5rem;
                 height: 7.5rem;
-                padding: 1.25rem;
                 margin-left: 2.1875rem;
             }
         }
@@ -21,7 +20,9 @@
             display: flex;
             margin: 1.25rem;
             width: 100%;
-            justify-content: space-between;
+            justify-content: end;
+            flex-direction: row;
+            align-items: center;
             ul{
                 display: flex;
                 gap: 1.25rem;
@@ -41,14 +42,15 @@
             .cartLogo{
                 display: flex;
                 padding-right: 1.875rem;
+                 text-decoration: none;
                 img{
-                    width: 4.375rem;
-                    height: 4.375rem;
+                    width: 3.125rem;
+                    height: 3.125rem;
                 }
                 p{
-                    font-size: 1.5rem;
-                    margin-top: 0;
-
+                    color: red;
+                    font-size: 1.125rem;
+                    margin: 0;    
                 }
             }
         }

@@ -11,7 +11,6 @@ const [product, setProduct] = useState([]);
 const { categoria } = useParams()
 const [loading, setLoading] = useState(true)
 
-console.log(categoria)
 useEffect(()=>{
 
     dataProduct
@@ -34,6 +33,7 @@ useEffect(()=>{
 
     return(
         <>
+            
             {
             loading ? (
                 <div className="loading">
@@ -41,11 +41,13 @@ useEffect(()=>{
                 </div>
                 
 
-            ) : (
-                <div className="itemListCont">
-                    <ItemList products = {product}/>
+            ) : (   
+                
+                <div className="divItem">
+                    <div className="itemListCont">
+                         <ItemList products = {product}/>
+                     </div>
                 </div>
-
             )}
         </>
     )

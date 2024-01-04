@@ -1,15 +1,17 @@
 import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
 
+import "./Cart.scss"
+
 const Cart = () =>{
     const{cart, deleteCart, deleteArticle} = useContext(CartContext)
     return(
 
-        <div>
-            <ul>
+        <div className="cart">
+            <ul className="ulCart">
                  {
                 cart.map((producto) =>(
-                    <li key={producto.id}>
+                    <li className="liCart" key={producto.id}>
                         <img src={producto.img} alt="" />
                         <p>{producto.id}</p>
                         <p>{producto.modelo}</p>
