@@ -1,12 +1,28 @@
 .detailItem{
-    background-color: rgb(167, 167, 167);
-    width: 12.5rem;
-    border: solid .0625rem black;
-    box-shadow: .3125rem .3125rem .3125rem black;
-    transition: 0.3s;
-    padding: .625rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
 }
-
-.detailItem:hover{
-    box-shadow: .625rem .625rem .625rem black;
+.buttonCartAdd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4.375rem;
+}
+.contItemDetail{
+    width: 80%;
+}
+.saleFinish{
+    background-color:darkorange;
+    width: 12.5rem;
+    height: 5rem;
+}
+.infoDetail{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    
+    padding-left: 100px;
 }

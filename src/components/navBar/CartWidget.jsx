@@ -8,9 +8,9 @@ import "./CartWidget"
 const CartWidget = () => {
 
     const {allArticle} = useContext(CartContext)
-
+    console.log(allArticle)
     return(
-
+            
             <Link to="/cart" className="cartLogo">
                 <img className="imgCart" src="/img/cart.png" alt="logo cart" />
                 <p>{allArticle()}</p>

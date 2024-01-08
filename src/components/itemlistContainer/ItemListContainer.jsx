@@ -12,7 +12,6 @@ const { categoria } = useParams();
 const [loading, setLoading] = useState(true);
 const [home, setHome] = useState(true);
 
-
 useEffect(()=>{
     
     dataProduct
@@ -24,7 +23,6 @@ useEffect(()=>{
         }else{
             setHome(true)
             setProduct(respuesta);
-            
         }
     })
     .catch((error)=>{
@@ -52,17 +50,13 @@ useEffect(()=>{
                      </div>
                 </div>
                 ):(
-                <div className="divItem">
+                    <div className="divItem">
                     <div className="itemListCont">
                         <h3>{categoria}</h3>
                          <ItemList products = {product}/>
                      </div>
                 </div>
-
-
                 )
-
-
             )}
         </>
     )

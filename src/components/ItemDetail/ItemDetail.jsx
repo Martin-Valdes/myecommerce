@@ -19,20 +19,25 @@ const ItemDetail = ({producto}) => {
     
     return (
 
-        <div className="detailItem">
-            <img src={producto.img} alt="" />
-            <p>Modelo: {producto.modelo}</p>
-            <p>Descripcion: {producto.descripcion}</p>
-            <p>Stock disponible: {producto.stock}</p>
-            <p>Categoria: {producto.categoria}</p>
-            <p>Costo: ${producto.precio}</p>
-            {toggle ? (
-                <Link to= "/cart"><button>Terminar mi compra</button></Link>
-            ):(
-                <ItemCount stock ={producto.stock} onAdd={onAdd} />
-            )
-            }
-            
+        <div className="contItemDetail">
+            <div className="detailItem">
+                <img className="imgDetail" src={producto.img} alt="" />
+                <div className="infoDetail">
+                    <p>Modelo: {producto.modelo}</p>
+                    <p>Descripcion: {producto.descripcion}</p>
+                    <p>Stock disponible: {producto.stock}</p>
+                    <p>Categoria: {producto.categoria}</p>
+                    <p>Costo: $ {producto.precio}</p>
+                </div>
+            </div>
+            <div className="buttonCartAdd">
+                {toggle ? (
+                <Link to= "/cart"><button className="saleFinish"><b>Terminar mi compra</b></button></Link>
+                ):(
+                    <ItemCount stock ={producto.stock} onAdd={onAdd} />
+                )
+                }
+            </div>
         </div>
        
     )

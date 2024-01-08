@@ -1,5 +1,26 @@
 .countItem{
-    display: inline-flex;
-    align-items: center;
+    display: flex;
+    gap: .625rem;
+    width: 25rem;
+    justify-content: center;
+}
     
+.sale{
+    background-color: rgb(235, 139, 49);
+    border-radius: .3125rem;
+    width: 6.25rem;   
+    margin-left: 3.75rem; 
+    
+}
+button{
+    border-radius: .3125rem;
+    background-color: rgb(228, 228, 228);
+    width: 3.125rem;
+}
+.numberProduct{
+    background-color: rgb(65, 65, 65);
+    margin: 0;
+    padding: 0;
+    width: 3.125rem;
+    font-size: 1.75rem;
 }
