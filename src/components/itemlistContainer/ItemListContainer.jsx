@@ -8,8 +8,8 @@ import "./ItemListContainer.css"
 const ItemListContainer = () =>{
 
 const [product, setProduct] = useState([]);
-const { categoria } = useParams()
-const [loading, setLoading] = useState(true)
+const { categoria } = useParams();
+const [loading, setLoading] = useState(true);
 
 useEffect(()=>{
 
@@ -20,6 +20,7 @@ useEffect(()=>{
             setProduct(filterProduct)
         }else{
             setProduct(respuesta);
+            
         }
     })
     .catch((error)=>{
@@ -33,16 +34,12 @@ useEffect(()=>{
 
     return(
         <>
-            
             {
             loading ? (
                 <div className="loading">
                     <PacmanLoader color="rgba(54, 55, 214, 1)" size={40}/>
                 </div>
-                
-
             ) : (   
-                
                 <div className="divItem">
                     <div className="itemListCont">
                          <ItemList products = {product}/>

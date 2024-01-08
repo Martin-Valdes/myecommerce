@@ -13,9 +13,9 @@ const Cart = () =>{
                 cart.map((producto) =>(
                     <li className="liCart" key={producto.id}>
                         <img src={producto.img} alt="" />
-                        <p>{producto.id}</p>
-                        <p>{producto.modelo}</p>
-                        <p>{producto.descripcion}</p>
+                        <p>ID: {producto.id}</p>
+                        <p>Modelo: {producto.modelo}</p>
+                        <p>Detalle: {producto.descripcion}</p>
                         <button onClick={() => deleteArticle(producto.id)}>Delete Product</button>
                     </li>
                 ))

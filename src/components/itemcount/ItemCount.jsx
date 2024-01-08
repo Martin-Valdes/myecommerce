@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import "./ItemCount.css"
 
 const ItemCount = ({stock, onAdd}) => {
