@@ -5,6 +5,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    button{
+        background-color: rgb(132, 240, 128);
+        width: 100px;
+    }
+    h3{
+        
+        font-size: 1.25rem;
+    }
+    
     .ulCart{
         background-color: gray;
         display: flex;
@@ -22,7 +31,25 @@
             p{
                 margin: 0;
             }
+            .butttonDelete{
+                width: 100px;
+                
+                border: solid 1px;
+                border-radius: 0;
+                }
         }
        
+    }
+}
+.emptyCart{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    a{
+        button{
+            background-color: black;
+            color: white;
+        }
     }
 }

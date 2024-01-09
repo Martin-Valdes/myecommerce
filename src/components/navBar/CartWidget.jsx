@@ -7,13 +7,17 @@ import "./CartWidget"
 
 const CartWidget = () => {
 
-    const {allArticle} = useContext(CartContext)
-    console.log(allArticle)
+    const {cart, allArticle} = useContext(CartContext)
+   
+
     return(
             
             <Link to="/cart" className="cartLogo">
-                <img className="imgCart" src="/img/cart.png" alt="logo cart" />
-                <p>{allArticle()}</p>
+                <p>🛒</p>
+                {
+                    cart.length !== 0 && <p>{allArticle()}</p>
+                }
+                
             </Link>
         
     )

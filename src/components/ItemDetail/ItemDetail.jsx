@@ -28,15 +28,21 @@ const ItemDetail = ({producto}) => {
                     <p>Stock disponible: {producto.stock}</p>
                     <p>Categoria: {producto.categoria}</p>
                     <p>Costo: $ {producto.precio}</p>
-                </div>
-            </div>
+                
             <div className="buttonCartAdd">
                 {toggle ? (
-                <Link to= "/cart"><button className="saleFinish"><b>Terminar mi compra</b></button></Link>
+                    <div className="buttonFinish">
+                        <Link to= "/cart"><button className="saleFinish"><b>Terminar mi compra</b></button></Link>
+                        <Link to= "/"><button className="saleFinish"><b>Seguir comprando</b></button></Link>
+                    </div>
+                
+                
                 ):(
                     <ItemCount stock ={producto.stock} onAdd={onAdd} />
+                    
                 )
-                }
+                }</div>
+            </div>
             </div>
         </div>
        

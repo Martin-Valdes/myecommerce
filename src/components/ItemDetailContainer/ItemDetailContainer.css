@@ -2,13 +2,16 @@
     height: 100vh;
     display: flex;
     align-items: center;
+    
     flex-direction: column;
     background-image: url("/public/img/2835.png");
-    padding: .3125rem;
+    padding-top: 2.5rem;
     color: white;
 }
 .imgDetail{
     width: 30%;
     
 }
-
+.infoDetail{
+    
+}

@@ -6,7 +6,7 @@ import { BrowserRouter,Routes, Route, Navigate } from "react-router-dom"
 import Cart from "./components/cart/Cart"
 import { CartProvider } from "./context/CartContext"
 
-import './App.css'
+
 import cart from "./components/cart/Cart"
 
 function App() {
