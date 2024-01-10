@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
-import dataProduct from "../utils/data"
 import ItemList from "../itemList/ItemList"
 import { useParams } from "react-router-dom"
 import { PacmanLoader } from "react-spinners"
+import { collection, getDocs, query, where } from "firebase/firestore" 
+import db from "../../db/db"
 
 import "./ItemListContainer.css"
 const ItemListContainer = () =>{
@@ -13,24 +14,32 @@ const [loading, setLoading] = useState(true);
 const [home, setHome] = useState(true);
 
 useEffect(()=>{
+    setLoading(true)
+
+    let check
+
+    const productsRef = collection(db, "products")
     
-    dataProduct
-    .then((respuesta)=>{
-        if(categoria){
-            const filterProduct = respuesta.filter((producto)=> producto.categoria === categoria)
-            setProduct(filterProduct)
-            setHome(false)
-        }else{
-            setHome(true)
-            setProduct(respuesta);
-        }
+    if(categoria){
+        check = query(productsRef, where("categoria", "==", categoria))
+    }else{
+        check = productsRef
+    }
+    
+    getDocs(check)
+    
+    .then((resp)=> {
+        let productsDb = resp.docs.map((prod)=>{
+
+            return  { id: prod.id, ...prod.data()};
+
+        });
+        setProduct(productsDb)
+        
     })
-    .catch((error)=>{
-        console.log(error);
-    })
-    .finally(()=>{
-        setLoading(false)
-    });
+    .catch((error)=> console.log(error))
+
+    .finally(()=>setLoading(false))
 
 },[categoria]);
 
