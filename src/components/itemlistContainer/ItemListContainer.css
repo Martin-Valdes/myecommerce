@@ -22,9 +22,8 @@
     align-items: center;
     
 }
-h3{
+.titleHome{
     color:blue;
-    font-size: 1.75rem;
-    font-style:italic;
-    font-family: 'Kalnia', serif;
+    font-size: 2rem;
+    font-weight: bolder;
 }

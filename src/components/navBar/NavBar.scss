@@ -16,6 +16,7 @@
                 width: 7.5rem;
                 height: 7.5rem;
                 margin-left: 2.1875rem;
+                margin: .625rem;
             }
         }
         .listNav{
@@ -33,7 +34,7 @@
                 a{
                     text-decoration: none;
                     color: azure;
-                    font-size: 1.5rem;
+                    font-size: 1.125rem;
                     transition: 0.8s;
                 }
                 a:hover{
@@ -50,8 +51,8 @@
                     height: 3.125rem;
                 }
                 p{
-                    color: rgb(3, 3, 3);
-                    font-size: 1.125rem;
+                    color: rgb(255, 255, 255);
+                    font-size: 1rem;
                     margin: 0;    
                 }
             }

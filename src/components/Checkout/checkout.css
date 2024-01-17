@@ -1,0 +1,10 @@
+.contentForm{
+    display: flex;
+    justify-content: center;
+    
+}
+.buttonConfirm{
+    width: 8.125rem;
+    margin: 1.25rem;
+
+}

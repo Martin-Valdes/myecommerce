@@ -1,15 +1,18 @@
 import { useContext, useState } from "react";
-import Form from "./form";
+import Form from "./Form";
 import { CartContext } from "../../context/CartContext";
 import { addDoc, collection } from "firebase/firestore";
 import db from "../../db/db";
+
+import "./Checkout.css"
 
 const Checkout = () => {
 
     const [dataForm, setDataForm] = useState({
         nombre: "",
         telefono: "",
-        email: ""
+        email: "",
+        emailRepeat: ""
     })
     const [idOrder, setIdOrder] = useState(null)
     const {cart, costoTotal, deleteCart } = useContext(CartContext)
@@ -20,12 +23,16 @@ const Checkout = () => {
 
     const sendOrder = (event) => {
         event.preventDefault()
-        const order = {
-            dataUser: {...dataForm},
-            products: [...cart],
-            total: costoTotal()
+        if(dataForm.email===dataForm.emailRepeat){
+            const order = {
+                dataUser: {...dataForm},
+                products: [...cart],
+                total: costoTotal()
+            }
+            uploadOrder(order)
+        }else{
+            alert("los emails")
         }
-        uploadOrder(order)
     }
 
     const uploadOrder = (order) =>{
@@ -38,7 +45,10 @@ const Checkout = () => {
     }
 
     return ( 
-        <div>
+        <>
+        <h2 className=" font-mono text-2xl  ">Ingrese sus datos</h2>
+        <div className="contentForm">
+            
             {idOrder ? (
                 <div>
                    <h3>Orden realizada con exito</h3>
@@ -55,6 +65,7 @@ const Checkout = () => {
                 />
                 )}  
         </div>
+        </>
      );
 }
  

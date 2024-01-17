@@ -56,7 +56,7 @@ useEffect(()=>{
                 home ?(
                     <div className="divItem">
                     <div className="itemListCont">
-                        <h3>Nuestros productos</h3>
+                        <h3 className="titleHome  bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-900">Nuestros productos</h3>
                          <ItemList products = {product}/>
                      </div>
                 </div>

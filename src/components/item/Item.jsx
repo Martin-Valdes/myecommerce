@@ -28,9 +28,9 @@ const Item = ({product}) =>{
             style={styleCard}
             className="item" 
         >
-            <img src={product.img} alt={product.modelo} />
+            <img className="imgProduct" src={product.img} alt={product.modelo} />
             <h2>{product.modelo}</h2>
-            <p>Costo: $ {product.precio}</p>
+            <p className="costProduct">Costo: $ {product.precio}</p>
             <Link to={`/detalle/${product.id}`} className="link">Mas detalles</Link>
         </div>
     )

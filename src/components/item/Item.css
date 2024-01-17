@@ -9,11 +9,7 @@
     transition: 0.3s;
     
 }
-img{
-    padding: 0;
-    margin: 0;
-    
-}
+
 .item:hover{
     box-shadow: .3125rem .3125rem .3125rem .3125rem rgb(155, 155, 155);
     scale: 1.01;
@@ -22,18 +18,19 @@ h2{
     font-size: 1.25rem;
     align-items: center;
     text-align: center;
-    margin: .625rem 0;
+    
 }
-p{
+.costProduct{
     text-align: center;
-    margin: .625rem;
 }
 .link{
+    display: flex;
     background-color: rgb(255, 255, 255);
     height: 6.25rem;
     text-align: center;
     text-decoration: none;
-    padding-top: 1.125rem;
+    justify-content: center;
+    flex-direction: column;
     color: white;
     background-color: black;
     transition: 0.3s;

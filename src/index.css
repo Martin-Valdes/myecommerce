@@ -2,9 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Berkshire+Swash&family=Cinzel+Decorative&family=Kalnia:wght@200&display=swap');
 
 /* font-family: 'Kalnia', serif; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html,body{
-    font-family: 'Bebas Neue', sans-serif;
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
