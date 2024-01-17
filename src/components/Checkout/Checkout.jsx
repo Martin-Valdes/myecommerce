@@ -3,6 +3,7 @@ import Form from "./Form";
 import { CartContext } from "../../context/CartContext";
 import { addDoc, collection } from "firebase/firestore";
 import db from "../../db/db";
+import Swal from 'sweetalert2';
 
 import "./Checkout.css"
 
@@ -27,11 +28,17 @@ const Checkout = () => {
             const order = {
                 dataUser: {...dataForm},
                 products: [...cart],
+                date: new Date(),
                 total: costoTotal()
             }
             uploadOrder(order)
         }else{
-            alert("los emails")
+            Swal.fire({
+                title: 'Los emails no coinciden',
+                text: 'Vuelva a intentarlo',
+                icon: 'error',
+                confirmButtonText: 'Aceptar'
+              });
         }
     }
 

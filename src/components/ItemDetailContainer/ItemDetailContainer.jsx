@@ -11,15 +11,17 @@ const ItemDetailContainer = () => {
 
     const [producto, setProtucto] = useState({})
     const {id} = useParams()
-    
+    const [productExist, setProductExist] = useState(false);
+
     useEffect(()=>{
 
         const productsRef = doc(db, "products", id)
-
         getDoc(productsRef)
-
         .then((respuesta)=>{
             const productDb ={id: respuesta.id, ...respuesta.data()}
+            if (!respuesta.exists()){
+                setProductExist(true)
+            }
             setProtucto(productDb)
         })
     },[id])
@@ -27,7 +29,13 @@ const ItemDetailContainer = () => {
     return(
 
         <div className="detailContainer">
-            <ItemDetail producto = {producto}/>
+            {
+                productExist ?(
+                    <div>El producto no existe</div>
+                ):(
+                    <ItemDetail producto = {producto}/>
+                )
+            }
         </div>
     )
 }
