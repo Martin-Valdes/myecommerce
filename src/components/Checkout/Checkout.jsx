@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import Form from "./Form";
 import { CartContext } from "../../context/CartContext";
 import { addDoc, collection } from "firebase/firestore";
@@ -53,16 +54,19 @@ const Checkout = () => {
 
     return ( 
         <>
-        <h2 className=" font-mono text-2xl  ">Ingrese sus datos</h2>
+        
         <div className="contentForm">
             
             {idOrder ? (
                 <div>
-                   <h3>Orden realizada con exito</h3>
-                   <p>No. de Orden: {idOrder}</p>
-                   <p>Nombre: {dataForm.nombre}</p>
-                   <p>Telefono: {dataForm.telefono}</p>
-                   <p>Email: {dataForm.email}</p>
+                   <h3 className="titleResume">Orden realizada con exito</h3>
+                   <section className="orderParrapf">
+                    <p>No. de Orden: {idOrder}</p>
+                    <p>Nombre: {dataForm.nombre}</p>
+                    <p>Telefono: {dataForm.telefono}</p>
+                    <p>Email: {dataForm.email}</p>
+                   </section>
+                   <Link to="/"><button className="buttonInicio">Volver a la tienda</button></Link>
                 </div>
                 ):(
                 <Form 

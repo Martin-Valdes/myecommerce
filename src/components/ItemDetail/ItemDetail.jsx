@@ -1,7 +1,7 @@
-import ItemCount from"../itemcount/ItemCount"
-import { useState } from "react"
+import { useState,useContext } from "react"
+
 import { Link } from "react-router-dom"
-import { useContext } from "react"
+import ItemCount from"../itemcount/ItemCount"
 import { CartContext } from "../../context/CartContext"
 
 import "./ItemDetail.css"
@@ -9,10 +9,10 @@ import "./ItemDetail.css"
 const ItemDetail = ({producto}) => {
 
     const [toggle, settoggle] = useState(false);
-    const {addProduct, allArticle} = useContext(CartContext);
-
+    const {addProduct} = useContext(CartContext);
+   
     const onAdd = (count) =>{
-        
+         
         const newProduct = {...producto, cantidad:count}
         addProduct(newProduct)
         
@@ -31,12 +31,10 @@ const ItemDetail = ({producto}) => {
                     <p>Stock disponible: {producto.stock}</p>
                     <p>Categoria: {producto.categoria}</p>
                     <p>Costo: $ {producto.precio}</p>
-                    
                 
             <div className="buttonCartAdd">
                 
                 {toggle ? (
-                    
                     <div className="buttonFinish">
                         
                         <Link to= "/cart"><button className="saleFinish" >Terminar mi compra</button></Link>

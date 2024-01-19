@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
-import ItemList from "../itemList/ItemList"
+
 import { useParams } from "react-router-dom"
+import ItemList from "../itemList/ItemList"
 import { PacmanLoader } from "react-spinners"
 import { collection, getDocs, query, where } from "firebase/firestore" 
 import db from "../../db/db"
@@ -13,7 +14,7 @@ const ItemListContainer = () =>{
 const [product, setProduct] = useState([]);
 const { categoria } = useParams();
 const [loading, setLoading] = useState(true);
-const [home, setHome] = useState(true);
+
 
 useEffect(()=>{
     setLoading(true)
@@ -23,6 +24,7 @@ useEffect(()=>{
     const productsRef = collection(db, "products")
     
     if(categoria){
+        
         check = query(productsRef, where("categoria", "==", categoria))
     }else{
         check = productsRef
@@ -43,31 +45,27 @@ useEffect(()=>{
 
     .finally(()=>setLoading(false))
 
-},[categoria]);
 
-    return(
+
+},[categoria]);
+return(
+
         <>
             {
             loading ? (
                 <div className="loading">
                     <PacmanLoader color="rgba(54, 55, 214, 1)" size={40}/>
                 </div>
-            ) : (   
-                home ?(
-                    <div className="divItem">
-                    <div className="itemListCont">
-                        <h3 className="titleHome  bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-900">Nuestros productos</h3>
+            ) : ( 
+                
+                <div className="divItem">
+                    <div  className="itemListCont">
+                        {categoria && <h3  className="titleHome  bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-900">{categoria.toUpperCase()}</h3>}
+                        {!categoria && <h3  className="titleHome  bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-900">Nuestros productos</h3>}
                          <ItemList products = {product}/>
                      </div>
                 </div>
-                ):(
-                    <div className="divItem">
-                    <div className="itemListCont">
-                        <h3>{categoria}</h3>
-                         <ItemList products = {product}/>
-                     </div>
-                </div>
-                )
+                
             )}
         </>
     )

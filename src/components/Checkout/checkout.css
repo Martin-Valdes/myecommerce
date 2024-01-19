@@ -1,10 +1,38 @@
 .contentForm{
     display: flex;
     justify-content: center;
+    background-color: beige;
     
 }
 .buttonConfirm{
-    width: 8.125rem;
-    margin: 1.25rem;
+    width: 13.0625rem;
+    margin-top: 1.25rem;
 
+}
+.orderParrapf{
+    font-style: italic;
+    font-weight: bold;
+}
+.titleResume{
+    padding: 1.25rem;
+    font-size: 2rem;
+}
+.buttonInicio{
+    background-color: black;
+    color: white;
+    margin-top: .9375rem;
+    border-radius: .625rem;
+    width: 18.75rem;
+}
+.form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    margin: 1.25rem;
+    padding: 1.25rem;
+    border-radius: .3125rem;
+    background-color: rgb(202, 202, 202);
 }

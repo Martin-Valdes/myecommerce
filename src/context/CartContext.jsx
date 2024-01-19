@@ -6,7 +6,7 @@ const CartProvider = ({children}) =>{
     const [cart, setCart] = useState([])
 
     const addProduct = (newProduct) =>{
-
+        
         const condition =onCart(newProduct.id)
 
         if(condition){
@@ -14,6 +14,7 @@ const CartProvider = ({children}) =>{
                 if(productoCarrito.id===productoCarrito.id){
                     return{...productoCarrito,cantidad: productoCarrito.cantidad+newProduct.cantidad}
                 }else{
+                    
                     return productoCarrito
                 }
             })
