@@ -7,7 +7,7 @@ import "./NavBar.scss"
 const NavBar = () => {
     return(
         <div className="navBar">
-            <Link to="/"><img className="imgLogo" src="/img/logo.webp" alt="logo de empresa"/></Link>
+            <Link to="/"><img className="imgLogo" src="../img/logo2.png" alt="logo de empresa"/></Link>
             <h1>ElectroComp</h1>
             <nav className="listNav">
                 <ul>

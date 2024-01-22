@@ -25,7 +25,6 @@ h2{
 }
 .link{
     display: flex;
-    background-color: rgb(255, 255, 255);
     height: 3.75rem;
     text-align: center;
     text-decoration: none;

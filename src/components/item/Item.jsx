@@ -32,7 +32,7 @@ const Item = ({product}) =>{
             <img className="imgProduct" src={product.img} alt={product.modelo} />
             <h2>{product.modelo}</h2>
             <p className="costProduct">Costo: $ {product.precio}</p>
-            <Link to={`/detalle/${product.id}`} className="link">Mas detalles</Link>
+            <Link to={`/detalle/${product.id}`} className="link bg-gradient-to-l from-red-700">Mas detalles</Link>
         </div>
     )
 }
