@@ -2,73 +2,62 @@
     height: 100vh;
     .navBar{
         background: linear-gradient(rgba(0, 0, 0, 0.75),rgba(118, 136, 180, 0.397));
+        width: 100%;
         display: flex;
-        flex-direction: row;
+        justify-content: space-around;
         align-items: center;
-        justify-content: space-between;
-        text-decoration: none;
-        h1{
+        .imgLogo{
+            width: 6.25rem;
+            height: 6.25rem;
+            margin: 1.25rem;
+            border-radius: 50%;
+        }
+        .imgLogo768{
             display: none;
         }
-        a{
-            .imgLogo{
-                width: 6.25rem;
-                height: 6.25rem;
-                margin: 1.25rem;
-                border-radius: 50%;
+        .cartLogo{
+        
+            img{
+                width: 1.875rem;
+                height: 1.875rem;
             }
-        }
-        .listNav{
-            display: flex;
-            margin: 1.25rem;
-            width: 100%;
-            justify-content: end;
-            flex-direction: row;
-            align-items: center;
-            ul{
-                display: flex;
-                gap: 1.25rem;
-                list-style: none;
-                padding: 1.25rem;
-                a{
-                    text-decoration: none;
-                    color: azure;
-                    font-size: 1.125rem;
-                    transition: 0.8s;
-                }
-                a:hover{
-                    color: red;
-                    filter: blur(.0525rem);
-                }
+            p{
+                color: white;
             }
-            .cartLogo{
-                display: flex;
-                padding-right: 1.875rem;
-                 text-decoration: none;
-                img{
-                    width: 3.125rem;
-                    height: 3.125rem;
-                    
-                }
-                p{
-                    color: rgb(255, 255, 255);
-                    font-size: 1rem;
-                    margin: 0;    
-                }
-            }
-        }
+            
+        } 
     }
 }
 
 @media  (max-width:768px){
     .div{
-        .navBar{
-        background-color: red;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        }   
+        .navBar{
+        background-color: red;
+        
+        .imgLogo{
+            display: none;
+            margin: .3125rem;
+        } 
+        .imgLogo768{
+            display: block;
+            width: 6.25rem;
+            height: 6.25rem;
+        }
+        
+        }
+        
+            .cartLogo{
+                position: fixed;
+                width: 2.5rem;
+                display:flex;
+                padding: .3125rem 1.25rem 0 0;
+                right: 0;
+            }
+        
+            
+        
     }
     
     

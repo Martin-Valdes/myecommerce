@@ -12,11 +12,10 @@ const CartWidget = () => {
     return(
             
             <Link to="/cart" className="cartLogo">
-                <p>🛒</p>
+                <img src="../img/carro-de-la-compra.png" alt="carro de compras" />
                 {
                     cart.length !== 0 && <p>{allArticle()}</p>
                 }
-                
             </Link>
         
     )
