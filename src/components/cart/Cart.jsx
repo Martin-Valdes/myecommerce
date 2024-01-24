@@ -6,7 +6,7 @@ import { CartContext } from "../../context/CartContext"
 import "./Cart.scss"
 
 const Cart = () =>{
-    const{cart,deleteCart, deleteArticle, costoTotal} = useContext(CartContext)
+    const{cart, deleteCart, deleteArticle, costoTotal} = useContext(CartContext)
 
     if(cart.length === 0){
             return (
@@ -38,7 +38,7 @@ const Cart = () =>{
                     ))
                     
                     }
-                    <button className="buttonDeleteAll " onClick={() => deleteCart()}><img/>Vaciar carrito</button>
+                    
                 </ul>
                 
                 <section className="infoButton">
@@ -46,6 +46,7 @@ const Cart = () =>{
                     <Link to="/checkout">
                         <button className="continueSale">Confirmar compra</button>
                     </Link>
+                    <button className="buttonDeleteAll " onClick={() => deleteCart()}>Vaciar carrito</button>
                 </section>
             </section>
         </div>

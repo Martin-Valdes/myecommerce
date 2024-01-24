@@ -5,9 +5,9 @@ import ItemList from "../itemList/ItemList"
 import { PacmanLoader } from "react-spinners"
 import { collection, getDocs, query, where } from "firebase/firestore" 
 import db from "../../db/db"
+import Carrousel from "../Carrousel/Carrousel"
 
 import "./ItemListContainer.css"
-
 
 const ItemListContainer = () =>{
 
@@ -39,35 +39,30 @@ useEffect(()=>{
 
         });
         setProduct(productsDb)
-        
     })
     .catch((error)=> console.log(error))
-
     .finally(()=>setLoading(false))
 
-
-
 },[categoria]);
-return(
 
-        <>
-            {
-            loading ? (
-                <div className="loading">
-                    <PacmanLoader color="rgba(54, 55, 214, 1)" size={40}/>
-                </div>
-            ) : ( 
-                
-                <div className="divItem">
-                    <div  className="itemListCont">
-                        {categoria && <h3  className="titleHome  bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-900">{categoria.toUpperCase()}</h3>}
-                        {!categoria && <h3  className="titleHome  bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-900">Nuestros productos</h3>}
-                         <ItemList products = {product}/>
-                     </div>
-                </div>
-                
-            )}
-        </>
+return(
+    <>
+    {
+       loading ? (
+            <div className="loading">
+               <PacmanLoader color="rgba(54, 55, 214, 1)" size={40}/>
+           </div>
+    ) : ( 
+        <div className="divItem">
+           <div  className="itemListCont">
+               {categoria && <h3  className="titleHome  bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-900">{categoria.toUpperCase()}</h3>}
+               {!categoria && <h3  className="titleHome  bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-900">Nuestros productos</h3>}
+                <ItemList products = {product}/>
+            </div>
+            <Carrousel/>
+        </div>
+    )}
+    </>
     )
 }
 

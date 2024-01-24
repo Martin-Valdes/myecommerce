@@ -26,11 +26,11 @@ const ItemDetail = ({producto}) => {
             <div className="detailItem">
                 <img className="imgDetail" src={producto.img} alt="" />
                 <div className="infoDetail">
-                    <p>Modelo: {producto.modelo}</p>
-                    <p>Descripcion: {producto.descripcion}</p>
-                    <p>Stock disponible: {producto.stock}</p>
-                    <p>Categoria: {producto.categoria}</p>
-                    <p>Costo: $ {producto.precio}</p>
+                    <p><b>Modelo:</b> {producto.modelo}</p>
+                    <p><b>Descripcion:</b> {producto.descripcion}</p>
+                    <p><b>Stock disponible:</b> {producto.stock}</p>
+                    <p><b>Categoria:</b> {producto.categoria}</p>
+                    <p><b>Costo: $</b> {producto.precio}</p>
                 
             <div className="buttonCartAdd">
                 

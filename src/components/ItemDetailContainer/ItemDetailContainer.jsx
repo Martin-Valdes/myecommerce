@@ -4,14 +4,17 @@ import { useParams } from "react-router-dom"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import { doc, getDoc } from "firebase/firestore"
 import db from "../../db/db"
+import Carrousel from "../Carrousel/Carrousel"
 
-import "./ItemDetailContainer.css"
+import './ItemDetailContainer.css';
 
 const ItemDetailContainer = () => {
 
     const [producto, setProtucto] = useState({})
     const {id} = useParams()
     const [productExist, setProductExist] = useState(false);
+
+   
 
     useEffect(()=>{
 
@@ -27,8 +30,8 @@ const ItemDetailContainer = () => {
     },[id])
 
     return(
-
-        <div className="detailContainer">
+        <div>
+            <div className="detailContainer">
             {
                 productExist ?(
                     <div>El producto no existe</div>
@@ -36,7 +39,11 @@ const ItemDetailContainer = () => {
                     <ItemDetail producto = {producto}/>
                 )
             }
+            
+            </div>
+            <Carrousel/>
         </div>
+        
     )
 }
 

@@ -1,7 +1,10 @@
 .contentForm{
+    height: 100%;
     display: flex;
     justify-content: center;
-    background-color: beige;
+    background: linear-gradient(rgba(5,7,12, 0.75),rgba(5,7,12, 0.75)),
+    url("../img/imgForm.webp");
+   
     
 }
 .buttonConfirm{
@@ -26,13 +29,24 @@
 }
 .form{
     display: flex;
+    height: 25rem;
     align-items: center;
     flex-direction: column;
     border-style: solid;
     border-width: 1px;
     border-color: black;
-    margin: 1.25rem;
+    margin: 2.5rem;
     padding: 1.25rem;
     border-radius: .3125rem;
     background-color: rgb(202, 202, 202);
+    background: linear-gradient(rgba(5,7,12, 0.75),rgba(5,7,12, 0.75));
+    color: white;
+}
+.inputForm{
+    background: linear-gradient(rgba(5,7,12, 0.75),rgba(5,7,12, 0.3));
+    
+}
+.labelForm{
+    color: white;
+   
 }

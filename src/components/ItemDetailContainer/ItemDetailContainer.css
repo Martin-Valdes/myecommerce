@@ -1,17 +1,14 @@
 .detailContainer{
-    height: 100vh;
+    
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: antiquewhite;
-    padding-top: 2.5rem;
+    background-color: white;
+    padding-top: 3.125rem;
     color: rgb(0, 0, 0);
+    margin-bottom: 6.25rem;
 }
 .imgDetail{
     width: 60%;
-    border: .125rem solid ;
-    border-color: black;
     border-radius: .5rem;
-
-    
 }
