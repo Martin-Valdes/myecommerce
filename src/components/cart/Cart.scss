@@ -1,8 +1,8 @@
 .cart{
-    
     margin: 0;
     padding: 0;
     display: flex;
+    width: 100%;
     min-height: 100vh;
     flex-direction: column;
     background: linear-gradient(rgba(5,7,12, 0.75),rgba(5,7,12, 0.75)),
@@ -20,6 +20,7 @@
         align-items: center;
         .infoButton{
             position: fixed;
+            
             bottom: 10%;
             right: 10%;
             width: 300px;
@@ -125,4 +126,133 @@
         }
 
     }
+}
+
+@media (max-width:768px){
+    .cart{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .titleCartAdd{
+            padding: 1.25rem;
+            color: white;
+            font-size: 2rem;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .cartResume{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .infoButton{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 30px;
+                margin: 0;
+                
+                .continueSale{
+                background-color: blue;
+                color: white;
+                border-radius: .9375rem;
+                width: 18.75rem;
+                padding: .9375rem;
+                margin-top: 1.875rem;;
+                }
+                .buttonDeleteAll{
+                    background-color: rgb(193, 192, 238);
+                     width: 6.25rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: .625rem;
+                    transition: 0.3s;
+                    margin-top: 1.25rem;
+                }
+                .buttonDeleteAll:hover{
+                background-color: rgb(255, 11, 11);
+                
+                }
+            }
+            .ulCart{
+            
+            list-style: none;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .liCart{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 15.625rem;
+                background-color: white;
+                padding: 1.25rem;
+                margin: 1.25rem;
+                align-items: center;
+                background: linear-gradient(rgba(5,7,12, 0.75),rgba(74, 86, 116, 0.75));
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 1rem;
+                color: white;
+                .buttonDelete{
+                    margin-top: 1.25rem;
+                    background-color: rgb(255, 255, 255);
+                    width: 6.25rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: .625rem;
+                    transition: 0.3s;
+                }
+                .buttonDelete:hover{
+                    background-color: rgb(206, 21, 21);
+                }
+            }
+            .buttonDeleteAll{
+                    background-color: rgb(193, 192, 238);
+                     width: 6.25rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: .625rem;
+                    transition: 0.3s;
+                }
+            .buttonDeleteAll:hover{
+                background-color: rgb(255, 11, 11);
+                
+            }
+           
+        }
+        }
+        
+    }
+    .emptyCart{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        height: 100%;
+        padding: 1.875rem;
+        .titleCartEmty{
+            
+            font-size: 2rem;
+        }
+        a{
+            .buttonHome{
+                background-color: black;
+                color: white;
+                margin: 1.875rem;
+                width: 12.5rem;
+                border-radius: .625rem;
+                box-shadow: .125rem .125rem gray;
+            }
+    
+        }
+    }
+
 }

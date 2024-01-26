@@ -30,16 +30,15 @@ const ItemDetailContainer = () => {
     },[id])
 
     return(
-        <div>
+        <div className="containerCarrusel">
             <div className="detailContainer">
-            {
-                productExist ?(
-                    <div>El producto no existe</div>
-                ):(
-                    <ItemDetail producto = {producto}/>
-                )
-            }
-            
+                {
+                    productExist ?(
+                        <div>El producto no existe</div>
+                    ):(
+                        <ItemDetail producto = {producto}/>
+                    )
+                }
             </div>
             <Carrousel/>
         </div>

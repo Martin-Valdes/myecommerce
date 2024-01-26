@@ -22,11 +22,10 @@ const ItemDetail = ({producto}) => {
     return (
 
         <div className="contItemDetail">
-            <h3 className="titleDetail  bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-900">Detalles del producto</h3>
+            <h3 className="titleDetail  bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-900">{producto.modelo}</h3>
             <div className="detailItem">
                 <img className="imgDetail" src={producto.img} alt="" />
                 <div className="infoDetail">
-                    <p><b>Modelo:</b> {producto.modelo}</p>
                     <p><b>Descripcion:</b> {producto.descripcion}</p>
                     <p><b>Stock disponible:</b> {producto.stock}</p>
                     <p><b>Categoria:</b> {producto.categoria}</p>
@@ -36,7 +35,6 @@ const ItemDetail = ({producto}) => {
                 
                 {toggle ? (
                     <div className="buttonFinish">
-                        
                         <Link to= "/cart"><button className="saleFinish" >Terminar mi compra</button></Link>
                         <Link to= "/"><button className="saleFinish">Seguir comprando</button></Link>
                     </div>

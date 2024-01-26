@@ -1,15 +1,12 @@
 .item{
     display: flex;
     flex-direction: column;
-   
-    border: .125rem solid rgb(187, 180, 180);
     width: 13.125rem;
     height: 18.75rem;
-    margin: 1.875rem;
+    margin-top:.9375rem;
     transition: 0.3s;
     
 }
-
 .item:hover{
     box-shadow: .3125rem .3125rem .3125rem .3125rem rgb(155, 155, 155);
     scale: 1.01;
@@ -37,4 +34,13 @@ h2{
 
 .link:hover{
     font-size: 1.125rem;
+}
+
+@media (max-width:768px){
+
+    .item{
+        width: 9.375rem;
+        height: 15.625rem;
+    }
+    
 }

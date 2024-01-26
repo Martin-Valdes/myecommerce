@@ -41,13 +41,13 @@ const Cart = () =>{
                     
                 </ul>
                 
-                <section className="infoButton">
-                    <h3>Precio total: $ {costoTotal()}</h3>
+                <div className="infoButton">
+                    <h3>Total: $ {costoTotal()}</h3>
                     <Link to="/checkout">
                         <button className="continueSale">Confirmar compra</button>
                     </Link>
                     <button className="buttonDeleteAll " onClick={() => deleteCart()}>Vaciar carrito</button>
-                </section>
+                </div>
             </section>
         </div>
     )

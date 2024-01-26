@@ -1,31 +1,39 @@
 .div{ 
     height: 100vh;
-    .navBar{
-        background: linear-gradient(rgba(0, 0, 0, 0.75),rgba(118, 136, 180, 0.397));
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        .imgLogo{
-            width: 6.25rem;
-            height: 6.25rem;
-            margin: 1.25rem;
-            border-radius: 50%;
-        }
-        .imgLogo768{
-            display: none;
-        }
+    .navNav{
         .cartLogo{
-        
+                position: absolute;
+                width: 2.5rem;
+                display:flex;
+                padding: .3125rem 1.25rem 0 0;
+                right: 10%;
             img{
                 width: 1.875rem;
                 height: 1.875rem;
             }
             p{
-                color: white;
+                color: rgb(0, 0, 0);
             }
             
         } 
+        .navBar{
+        background: linear-gradient(rgba(0, 0, 0, 0.75),rgba(118, 136, 180, 0.397));
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+            .imgLogo{
+                width: 6.25rem;
+                height: 6.25rem;
+                margin: 1.25rem;
+                border-radius: 50%;
+            }
+            .imgLogo768{
+            display: none;
+            }
+    }
+    
+        
     }
 }
 
@@ -33,9 +41,11 @@
     .div{
         display: flex;
         flex-direction: column;
+       .navNav{
         .navBar{
-        background-color: red;
-        
+            background-color: red;
+            
+              
         .imgLogo{
             display: none;
             margin: .3125rem;
@@ -55,6 +65,8 @@
                 padding: .3125rem 1.25rem 0 0;
                 right: 0;
             }
+       }
+        
         
             
         

@@ -1,5 +1,4 @@
 .detailContainer{
-    
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -11,4 +10,15 @@
 .imgDetail{
     width: 60%;
     border-radius: .5rem;
+}
+
+
+@media (max-width:768px){
+    .conuntItem{
+        flex-direction: column;
+    }
+    .detailContainer{
+        margin:0;
+        padding:0;
+    }
 }

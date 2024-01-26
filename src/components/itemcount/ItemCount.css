@@ -3,6 +3,8 @@
     gap: .625rem;
     align-items: center;
     margin-top: 1.25rem;
+    justify-content: center;
+    
 }
     
 .sale{
@@ -15,16 +17,14 @@
 }
 
 .countButton{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 3.125rem;
-    height: 1.875rem;
-    font-size: 1rem;
-    font-weight: bolder;
-    border-radius: .3125rem;
-    color: white;
-    font-size: 1.625rem;
+    
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: .625rem;
+    color: red;
+    background-color:yellow;
+    
+    
     
 }
 .numberProduct{
@@ -34,4 +34,6 @@
     background-color: rgb(48, 30, 209);
     color: white;
     border-radius: .3125rem;
+    
 }
+
