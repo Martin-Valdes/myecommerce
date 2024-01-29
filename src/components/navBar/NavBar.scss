@@ -2,17 +2,19 @@
     height: 100vh;
     .navNav{
         .cartLogo{
-                position: absolute;
+                
                 width: 2.5rem;
                 display:flex;
                 padding: .3125rem 1.25rem 0 0;
                 right: 10%;
+                
+                
             img{
                 width: 1.875rem;
                 height: 1.875rem;
             }
             p{
-                color: rgb(0, 0, 0);
+                color: rgb(255, 255, 255);
             }
             
         } 
@@ -43,9 +45,17 @@
         flex-direction: column;
        .navNav{
         .navBar{
-            background-color: red;
-            
-              
+            background-color: red; 
+            .cartLogo{
+                position: absolute;
+                width: 2.5rem;
+                margin-top: 130px;
+                padding: .3125rem 1.25rem 0 0;
+                right: 0;
+            }
+            p{
+                color: black;
+            }
         .imgLogo{
             display: none;
             margin: .3125rem;
@@ -58,13 +68,7 @@
         
         }
         
-            .cartLogo{
-                position: fixed;
-                width: 2.5rem;
-                display:flex;
-                padding: .3125rem 1.25rem 0 0;
-                right: 0;
-            }
+           
        }
         
         

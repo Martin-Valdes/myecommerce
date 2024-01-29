@@ -19,7 +19,7 @@ const Item = ({product}) =>{
     };
 
     const styleCard ={
-        backgroundColor: colorCard ? '#E1D8E6': '#C8C7E8'
+        backgroundColor: colorCard ? '#HHHHHHHH': '#FFFFFFF'
        
     }
     return (

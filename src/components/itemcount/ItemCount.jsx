@@ -22,6 +22,7 @@ const ItemCount = ({stock, onAdd}) => {
         <>
         <section className="sectionCount">
             <div className="countItem">
+                <p><b>Cantidad:</b></p>
                 <button className="  transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-100 countButton" onClick={sumar}> <img src="../img/arrowUp.svg" alt="" /> </button>
                 <p className="numberProduct">{count}</p>
                 <button className=" countButton transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-100" onClick={restar}> <img src="../img/arrowDown.svg" alt="" /> </button>

@@ -26,23 +26,21 @@ const ItemDetail = ({producto}) => {
             <div className="detailItem">
                 <img className="imgDetail" src={producto.img} alt="" />
                 <div className="infoDetail">
-                    <p><b>Descripcion:</b> {producto.descripcion}</p>
-                    <p><b>Stock disponible:</b> {producto.stock}</p>
-                    <p><b>Categoria:</b> {producto.categoria}</p>
-                    <p><b>Costo: $</b> {producto.precio}</p>
-                
-            <div className="buttonCartAdd">
-                
-                {toggle ? (
-                    <div className="buttonFinish">
-                        <Link to= "/cart"><button className="saleFinish" >Terminar mi compra</button></Link>
-                        <Link to= "/"><button className="saleFinish">Seguir comprando</button></Link>
-                    </div>
-                ):(
-                    <ItemCount stock ={producto.stock} onAdd={onAdd} />
-                )
-                }</div>
-            </div>
+                    <li><b>Descripcion:</b> {producto.descripcion}</li>
+                    <li><b>Stock disponible:</b> {producto.stock}</li>
+                    <li><b>Categoria:</b> {producto.categoria}</li>
+                    <li><b>Costo: $</b> {producto.precio}</li>
+                </div>
+                <div className="buttonCartAdd">
+                    {toggle ? (
+                        <div className="buttonFinish">
+                            <Link to= "/cart"><button className="saleFinish" >Terminar mi compra</button></Link>
+                            <Link to= "/"><button className="saleFinish">Seguir comprando</button></Link>
+                        </div>
+                    ):(
+                        <ItemCount stock ={producto.stock} onAdd={onAdd} />
+                    )}
+                </div>
             </div>
         </div>
        

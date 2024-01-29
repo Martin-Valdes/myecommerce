@@ -19,8 +19,6 @@
         justify-content: center;
         align-items: center;
         .infoButton{
-            position: fixed;
-            
             bottom: 10%;
             right: 10%;
             width: 300px;
@@ -135,32 +133,35 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        height: 100%;
         .titleCartAdd{
-            padding: 1.25rem;
+            padding: 1.125rem;
             color: white;
-            font-size: 2rem;
+            font-size: 1.25rem;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+           
         }
         .cartResume{
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            
             align-items: center;
             .infoButton{
-                position: relative;
+                
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
                 align-items: center;
-                padding-top: 30px;
-                margin: 0;
-                
+                padding-bottom: 1.875rem;
+                right: 0;
+                h3{
+                    color: black;
+                }
                 .continueSale{
                 background-color: blue;
                 color: white;
                 border-radius: .9375rem;
-                width: 18.75rem;
+                width: 100%;
                 padding: .9375rem;
                 margin-top: 1.875rem;;
                 }
@@ -180,28 +181,26 @@
                 }
             }
             .ulCart{
-            
-            list-style: none;
             padding: 1.25rem;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
+            height: 18.75rem;
             .liCart{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                width: 15.625rem;
                 background-color: white;
-                padding: 1.25rem;
-                margin: 1.25rem;
                 align-items: center;
                 background: linear-gradient(rgba(5,7,12, 0.75),rgba(74, 86, 116, 0.75));
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
                 font-size: 1rem;
                 color: white;
+                li{
+                    font-size: 1rem;
+                }
                 .buttonDelete{
                     margin-top: 1.25rem;
-                    background-color: rgb(255, 255, 255);
+                    background-color: rgb(206, 206, 206);
                     width: 6.25rem;
                     display: flex;
                     align-items: center;
