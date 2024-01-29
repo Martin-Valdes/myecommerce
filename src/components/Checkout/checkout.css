@@ -25,7 +25,7 @@
     color: white;
     margin-top: .9375rem;
     border-radius: .625rem;
-    width: 18.75rem;
+    width: 80%;
 }
 .form{
     display: flex;
@@ -49,4 +49,10 @@
 .labelForm{
     color: white;
    
+}
+.cardResume{
+    background-color:rgba(140, 245, 100,0.5);
+}
+.cardContainer{
+    padding-top: 1.25rem;
 }

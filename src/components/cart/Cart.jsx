@@ -1,21 +1,37 @@
-import { useContext } from "react"
+import { useContext,useEffect } from "react"
 
 import { Link } from "react-router-dom"
 import { CartContext } from "../../context/CartContext"
+import Swal from 'sweetalert2';
+
 
 import "./Cart.scss"
 
 const Cart = () =>{
+
+    
     const{cart, deleteCart, deleteArticle, costoTotal} = useContext(CartContext)
 
     if(cart.length === 0){
-            return (
-            <div className="emptyCart">
-                <h3 className="titleCartEmty">El carrito esta vacio</h3>
-                <img src="../../img/carrito-vacio.webp" alt="imagen carrito vacio" />
-                <Link to="/"><button className="buttonHome">Home</button></Link>
-            </div>
-        )
+            useEffect(() => {
+        const handleButtonClick = async () => {
+          const result = await Swal.fire({
+            title: 'Vuelve a la tienda!',
+            text: 'No hay productos en el carrito',
+            icon: 'warning',
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Ir a la tienda'
+          });
+    
+          if (result.isConfirmed) {
+            window.location.href = '/'; // Redirecciona a la página de inicio
+          }
+        };
+    
+        handleButtonClick(); // Se ejecuta la función al cargar el componente
+      }, []); 
+        
     }
 
     return(
