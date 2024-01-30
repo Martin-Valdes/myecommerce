@@ -54,7 +54,6 @@ const Checkout = () => {
 
     return ( 
         <>
-        
         <div className="contentForm">
             {idOrder ? (
                 <div><div class="max-w-sm rounded overflow-hidden shadow-lg cardContainer">
