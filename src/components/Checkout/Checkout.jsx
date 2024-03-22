@@ -6,7 +6,7 @@ import { addDoc, collection } from "firebase/firestore";
 import db from "../../db/db";
 import Swal from 'sweetalert2';
 
-import "./Checkout.css"
+import "./checkout.css"
 
 const Checkout = () => {
 
