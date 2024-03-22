@@ -5,7 +5,7 @@ import NavBar from "./components/navBar/NavBar"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
 import Cart from "./components/cart/Cart"
 import { CartProvider } from "./context/CartContext"
-import Checkout from "./components/Checkout/CheckOut"
+import Checkout from "./components/Checkout/Checkout"
 
 function App() {
 
